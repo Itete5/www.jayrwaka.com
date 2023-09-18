@@ -13,6 +13,21 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="stylesheet" href="style.css">
    
+    <script>
+	    function updateDate() {
+		    const currentDate = new Date(); 
+		    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+		    const formattedDate = currentDate.toLocaleDateString('en-US', options);
+		    document.getElementById('current-date').textContent = formattedDate;
+	    }
+
+	// Call the function to update the date initially
+	updateDate();
+	// Set an interval to update the date every second (or as frequently as you like) 
+	setInterval(updateDate, 1000); // Update every 1000 milliseconds (1 second)
+     </script>
+
+   
 </head>
 <body class="is-preload">
 
